@@ -19,6 +19,7 @@ function getExchange(currency) {
 
 function printElements(currency) {
   document.querySelector('#selectedCurrency').innerText = `${data[1].conversion_rates.${currency}}`
+  //LEFT OFF TRYING TO FIGURE OUT LINE ABOVE AND HOW TO PROPERLY CALL EXCHANGE RATE
   console.log("#selectedCurrency")
 }
 
