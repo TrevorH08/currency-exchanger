@@ -17,8 +17,8 @@ function getExchange(currency) {
 
 // UI Logic
 
-function printElements(data) {
-  document.querySelector('#selectedCurrency').innerText = `${CurrencyExchange.conversion_rates.data[1]}`
+function printElements(currency) {
+  document.querySelector('#selectedCurrency').innerText = `${data[1].conversion_rates.${currency}}`
   console.log("#selectedCurrency")
 }
 
