@@ -12,10 +12,22 @@ function getExchange(currency) {
   }, function (errorArray) {
     printError(errorArray);
   });
+  console.log(currencyDataArray)
 }
 
 // UI Logic
 
 function printElements(data) {
-  document.querySelector('#selectedCurrency').innerText = 
+  document.querySelector('#selectedCurrency').innerText = `${CurrencyExchange.conversion_rates.data[1]}`
+  console.log("#selectedCurrency")
 }
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+  const currency = document.querySelector('#currency').value;
+  getExchange(currency);
+}
+
+window.addEventListener("load", function() {
+  this.document.querySelector('#exchanger').addEventListener("submit", handleFormSubmission);
+});
