@@ -13,3 +13,9 @@ function getExchange(currency) {
     printError(errorArray);
   });
 }
+
+// UI Logic
+
+function printElements(data) {
+  document.querySelector('#selectedCurrency').innerText = 
+}
