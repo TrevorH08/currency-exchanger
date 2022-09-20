@@ -2,7 +2,7 @@
 
 #### This webpage will allow you to convert USD into several different currencies based off of current exchange rates.
 
-#### By (Your Name Here)
+#### By Trevor Hunter
 
 ## GitHub Pages
 
