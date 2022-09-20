@@ -8,7 +8,7 @@ import CurrencyExchange from './js/currency.js';
 function getExchange(currency) {
   let promise = CurrencyExchange.getExchange(currency);
   promise.then(function(currencyDataArray) {
-    printElements(currencyDataArray);
+    printElements(currencyDataArray, currency);
   }, function (errorArray) {
     printError(errorArray);
   });
@@ -17,8 +17,8 @@ function getExchange(currency) {
 
 // UI Logic
 
-function printElements(currency) {
-  document.querySelector('#selectedCurrency').innerText = `${data[1].conversion_rates.${currency}}`
+function printElements(data, currency) {
+  document.querySelector('#selectedCurrency').innerText = `${data.conversion_rates[currency]}`
   //LEFT OFF TRYING TO FIGURE OUT LINE ABOVE AND HOW TO PROPERLY CALL EXCHANGE RATE
   console.log("#selectedCurrency")
 }
