@@ -8,10 +8,13 @@
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _JavaScript_
+* _CSS_
+* _Bootstrap_
+* _HTML_
+* _Webpack_
+* _Jest_
+* _Lint_
 
 ## Description
 
