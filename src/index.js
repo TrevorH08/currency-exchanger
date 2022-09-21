@@ -18,13 +18,15 @@ function getExchange(currency) {
 // UI Logic
 
 function printElements(data, currency) {
-  document.querySelector('#selectedCurrency').innerText = `${data[0].conversion_rates[currency]}`;
+  let rate = `${data[0].conversion_rates[currency]}`;
+  let userAmount = document.querySelector('#amountInput').value;
+  document.querySelector('#selectedCurrency').innerText = userAmount * rate;
   //LEFT OFF TRYING TO FIGURE OUT LINE ABOVE AND HOW TO PROPERLY CALL EXCHANGE RATE
   console.log(currency);
 }
 
-function printError(error) {
-  document.querySelector('#selectedCurrency').innerText = `There was an error accessing the exchange data for ${error[1]}`;
+function printError(error, response) {
+  document.querySelector('#selectedCurrency').innerText = `There was an error accessing the exchange data for ${error[2]} ${response}`;
 }
 
 function handleFormSubmission(event) {
