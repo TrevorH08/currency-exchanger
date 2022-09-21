@@ -15,6 +15,7 @@
 * _Webpack_
 * _Jest_
 * _Lint_
+* _Exchange Rate API_
 
 ## Description
 
