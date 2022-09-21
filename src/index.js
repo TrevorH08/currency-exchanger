@@ -19,7 +19,7 @@ function getExchange(currency) {
 function printElements(data, currency) {
   document.querySelector('#results').innerText = "";
   document.querySelector('#rate').innerText = "";
-  if (currency === "CAD" || currency === "JPY" || currency === "EUR" || currency === "SEK" || currency === "AUD") {
+  if (currency.length === 3) {
     let rate = `${data[0].conversion_rates[currency]}`;
     let userAmount = document.querySelector('#amountInput').value;
     let convertedAmount = userAmount * rate;
