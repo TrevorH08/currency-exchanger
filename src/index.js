@@ -11,20 +11,20 @@ function getExchange(currency) {
     printElements(currencyDataArray, currency);
   }, function (errorArray) {
     printError(errorArray);
-    console.log(currency)
+    console.log(currency);
   });
 }
 
 // UI Logic
 
 function printElements(data, currency) {
-  document.querySelector('#selectedCurrency').innerText = `${data.conversion_rates[currency]}`
+  document.querySelector('#selectedCurrency').innerText = `${data[0].conversion_rates[currency]}`;
   //LEFT OFF TRYING TO FIGURE OUT LINE ABOVE AND HOW TO PROPERLY CALL EXCHANGE RATE
-  console.log("#selectedCurrency")
+  console.log(currency);
 }
 
 function printError(error) {
-  document.querySelector('#selectedCurrency').innerText = `There was an error accessing the exchange data for `
+  document.querySelector('#selectedCurrency').innerText = `There was an error accessing the exchange data for ${error[1]}`;
 }
 
 function handleFormSubmission(event) {
@@ -34,5 +34,5 @@ function handleFormSubmission(event) {
 }
 
 window.addEventListener("load", function() {
-  this.document.getElementById('#exchanger').addEventListener("submit", handleFormSubmission);
+  this.document.querySelector('form').addEventListener("submit", handleFormSubmission);
 });
