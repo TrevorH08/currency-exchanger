@@ -11,8 +11,8 @@ function getExchange(currency) {
     printElements(currencyDataArray, currency);
   }, function (errorArray) {
     printError(errorArray);
+    console.log(currency)
   });
-  console.log(currencyDataArray)
 }
 
 // UI Logic
@@ -23,6 +23,10 @@ function printElements(data, currency) {
   console.log("#selectedCurrency")
 }
 
+function printError(error) {
+  document.querySelector('#selectedCurrency').innerText = `There was an error accessing the exchange data for `
+}
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const currency = document.querySelector('#currency').value;
@@ -30,5 +34,5 @@ function handleFormSubmission(event) {
 }
 
 window.addEventListener("load", function() {
-  this.document.querySelector('#exchanger').addEventListener("submit", handleFormSubmission);
+  this.document.getElementById('#exchanger').addEventListener("submit", handleFormSubmission);
 });
