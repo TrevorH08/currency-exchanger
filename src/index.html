@@ -7,7 +7,8 @@
   <div class="container">
     <h1>Currency Exchange</h1>
     <form id="exchanger">
-      <h2>Select the currency you would like to exchange US Dollars to.</h2>
+      <h2>Select the currency you would like to exchange US Dollars to:</h2>
+      <br>
       <select name="currency" id="currency">
         <option value="CAD">Canadian Dollar</option>
         <option value="JPY">Japanese Yen</option>
@@ -16,12 +17,15 @@
         <option value="AUD">Australian Dollar</option>
       </select>
       <br>
+      <br>
       <h2>Input dollar amount to convert: </h2>
       <label for="amountInput">$</label>
       <input type="number" id="amountInput" name="amountInput">
       <button type=""submit" class="btn btn-dark">Exchange</button>
     </form>
-    <h2 id="results" class="hidden">$<span id="usdInput"></span> = <span id="selectedCurrency"></span></h3>
+    <h2 id="rate"></h2>
+    <br>
+    <h2 id="results"></h2>
   </div>
 </body>
 </html>

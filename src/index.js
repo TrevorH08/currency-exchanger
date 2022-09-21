@@ -20,7 +20,9 @@ function getExchange(currency) {
 function printElements(data, currency) {
   let rate = `${data[0].conversion_rates[currency]}`;
   let userAmount = document.querySelector('#amountInput').value;
-  document.querySelector('#selectedCurrency').innerText = userAmount * rate;
+  let convertedAmount = userAmount * rate;
+  document.querySelector('#rate').innerText = "Conversion Rate: $1 = " + rate + " " + currency
+  document.querySelector('#results').innerText = "Entered Amount: $" + userAmount + " = " + convertedAmount.toFixed(4) + " " + currency;
   //LEFT OFF TRYING TO FIGURE OUT LINE ABOVE AND HOW TO PROPERLY CALL EXCHANGE RATE
   console.log(currency);
 }
