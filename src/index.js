@@ -11,7 +11,7 @@ function getExchange(currency) {
     printElements(currencyDataArray, currency);
   }, function (errorArray) {
     printError(errorArray);
-    console.log(currency);
+    console.log(errorArray);
   });
 }
 
@@ -27,8 +27,9 @@ function printElements(data, currency) {
   console.log(currency);
 }
 
-function printError(error, response) {
-  document.querySelector('#selectedCurrency').innerText = `There was an error accessing the exchange data for ${error[2]} ${response}`;
+function printError(error) {
+  CurrencyExchange.response;
+  document.querySelector('#results').innerText = `There was an error accessing the exchange data for ${error[2]} `;
 }
 
 function handleFormSubmission(event) {
